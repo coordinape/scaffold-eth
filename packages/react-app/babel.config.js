@@ -1,14 +1,14 @@
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
 
-  const presets = ['@babel/preset-react'];
+  const presets = ["@babel/preset-react", "@babel/preset-env"];
   const plugins = [];
 
-  const babelrcRoots = ['.', './lib/*'];
+  const babelrcRoots = [".", "./lib/*"];
 
   return {
     presets,
     plugins,
-    babelrcRoots
+    babelrcRoots,
   };
 };
